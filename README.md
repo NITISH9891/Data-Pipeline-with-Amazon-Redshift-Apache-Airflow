@@ -155,6 +155,10 @@ Once the server is ready, click on the ACCESS AIRFLOW BUTTON and should Open the
 ```
 <img src="Images/connection-aws-credentials.png" width="100%" alt="" title="connection-aws-credentials"/>
 4.On the next create connection page, enter the following values:
+
+```sh
+
+
 >- **Conn Id**: Enter redshift.
 >- **Conn Type**: Enter Postgres.
 >- **Host**: Enter the endpoint of your Redshift cluster, excluding the port at the end. You can find this by selecting your cluster in the Clusters page of the Amazon Redshift console. See where this is located in the screenshot above. IMPORTANT: Make sure to NOT include the port at the end of the Redshift endpoint string.
@@ -162,6 +166,9 @@ Once the server is ready, click on the ACCESS AIRFLOW BUTTON and should Open the
 >- **Login**: Enter awsuser.
 >- **Password**: Enter the password you created when launching your Redshift cluster.
 >- **Port**: Enter **5439**
+
+
+```
 <img src="Images/connection-redshift.png" width="100%" alt="" title="connection-redshift"/>
 Once you've entered these values, select Save.
 
@@ -193,7 +200,6 @@ Sample Query Results:
 
 
 ##Clean Up Resources
-##### &nbsp;
 Congratulations, you just deployed an ETL data pipeline with Apache Airflow and Amazon EMR. Remember to delete your S3 bucket and EMR cluster in order to avoid unexpected costs.
 
 

@@ -159,13 +159,13 @@ Once the server is ready, click on the ACCESS AIRFLOW BUTTON and should Open the
 ```sh
 
 
->- **Conn Id**: Enter redshift.
->- **Conn Type**: Enter Postgres.
->- **Host**: Enter the endpoint of your Redshift cluster, excluding the port at the end. You can find this by selecting your cluster in the Clusters page of the Amazon Redshift console. See where this is located in the screenshot above. IMPORTANT: Make sure to NOT include the port at the end of the Redshift endpoint string.
->- **Schema**: Enter dev. This is the Redshift database you want to connect to.
->- **Login**: Enter awsuser.
->- **Password**: Enter the password you created when launching your Redshift cluster.
->- **Port**: Enter **5439**
+*Conn Id: Enter redshift.
+*Conn Type: Enter Postgres.
+*Host: Enter the endpoint of your Redshift cluster, excluding the port at the end. You can find this by selecting your cluster in the Clusters page of the Amazon Redshift console. See where this is located in the screenshot above. IMPORTANT: Make sure to NOT include the port at the end of the Redshift endpoint string.
+*Schema: Enter dev. This is the Redshift database you want to connect to.
+*Login: Enter awsuser.
+*Password: Enter the password you created when launching your Redshift cluster.
+*Port: Enter **5439**
 
 
 ```
@@ -199,7 +199,8 @@ Sample Query Results:
 <img src="Images/query_result_four.png" width="100%" alt="" title="query_result_four"/>
 
 
-##Clean Up Resources
+## Clean Up Resources
+##### &nbsp;
 Congratulations, you just deployed an ETL data pipeline with Apache Airflow and Amazon EMR. Remember to delete your S3 bucket and EMR cluster in order to avoid unexpected costs.
 
 
@@ -207,6 +208,9 @@ Congratulations, you just deployed an ETL data pipeline with Apache Airflow and 
 ##### &nbsp;
 
 * **Apache Airflow:** This amazing medium post describes different issues with creating, navigating and other related staffs. Have a look at it [Apache Airflow Tips](https://towardsdatascience.com/5-essential-tips-when-using-apache-airflow-to-build-an-etl-pipeline-for-a-database-hosted-on-3d8fd0430acc). Especially Tip 1 - Start with the simplest DAG and Tip 2 - How to stop/kill Airflow tasks from the Airflow UI?
+
+
+* **Apache Airflow:** Another great medium post to get familiarize with Apache Airflow [Getting Started With Apache Airflow](https://towardsdatascience.com/getting-started-with-apache-airflow-df1aa77d7b1b)
 
 
 

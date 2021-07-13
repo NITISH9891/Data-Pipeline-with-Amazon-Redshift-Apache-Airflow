@@ -144,10 +144,15 @@ Once the server is ready, click on the ACCESS AIRFLOW BUTTON and should Open the
 2. Under Connections, Select Create
 <img src="Images/create-connections.png" width="100%" alt="" title="create-connections"/>
 3.On the create connection page, enter the following values:
+
+```sh
+
    *Conn Id: Enter aws_credentials.
    *Conn Type: Enter Amazon Web Services.
    *Login: Enter your Access key ID from the IAM User credentials you downloaded earlier.
    *Password: Enter your Secret access key from the IAM User credentials that you downloaded earlier. Click Save and Add another
+
+```
 <img src="Images/connection-aws-credentials.png" width="100%" alt="" title="connection-aws-credentials"/>
 4.On the next create connection page, enter the following values:
 >- **Conn Id**: Enter redshift.
@@ -188,10 +193,12 @@ Sample Query Results:
 
 
 ##Clean Up Resources
+##### &nbsp;
 Congratulations, you just deployed an ETL data pipeline with Apache Airflow and Amazon EMR. Remember to delete your S3 bucket and EMR cluster in order to avoid unexpected costs.
 
 
 ## Additional Resources 
+##### &nbsp;
 
 * **Apache Airflow:** This amazing medium post describes different issues with creating, navigating and other related staffs. Have a look at it [Apache Airflow Tips](https://towardsdatascience.com/5-essential-tips-when-using-apache-airflow-to-build-an-etl-pipeline-for-a-database-hosted-on-3d8fd0430acc). Especially Tip 1 - Start with the simplest DAG and Tip 2 - How to stop/kill Airflow tasks from the Airflow UI?
 

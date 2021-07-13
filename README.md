@@ -142,7 +142,7 @@ Once the server is ready, click on the ACCESS AIRFLOW BUTTON and should Open the
 1. Click on the Admin tab and select Connections.
 <img src="Images/admin-connections.png" width="100%" alt="" title="admin-connections" />
 2. Under Connections, Select Create
-<img src="Images/create-connections.png" width="100%" alt="" title="create-connections"/>
+<img src="Images/create-connection.png" width="100%" alt="" title="create-connection"/>
 3.On the create connection page, enter the following values:
 
 ```sh

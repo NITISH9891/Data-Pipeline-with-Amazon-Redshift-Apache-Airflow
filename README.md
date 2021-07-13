@@ -144,10 +144,10 @@ Once the server is ready, click on the ACCESS AIRFLOW BUTTON and should Open the
 2. Under Connections, Select Create
 <img src="Images/create-connections.png" width="100%" alt="" title="create-connections"/>
 3.On the create connection page, enter the following values:
->- **Conn Id**: Enter aws_credentials.
->- **Conn Type**: Enter Amazon Web Services.
->- **Login**: Enter your Access key ID from the IAM User credentials you downloaded earlier.
->- **Password**: Enter your Secret access key from the IAM User credentials that you downloaded earlier. Click Save and Add another
+*Conn Id: Enter aws_credentials.
+*Conn Type: Enter Amazon Web Services.
+*Login: Enter your Access key ID from the IAM User credentials you downloaded earlier.
+*Password: Enter your Secret access key from the IAM User credentials that you downloaded earlier. Click Save and Add another
 <img src="Images/connection-aws-credentials.png" width="100%" alt="" title="connection-aws-credentials"/>
 4.On the next create connection page, enter the following values:
 >- **Conn Id**: Enter redshift.
@@ -170,8 +170,9 @@ You have to wait for a while. If everything goes smoothly, you will find all gre
 <img src="Images/Tree_View.png" width="100%" alt="" title="Tree_View"/>
 
 
-##### &nbsp;
+
 ### Result 
+##### &nbsp;
 Results from the data quality check operator:
 <img src="Images/data_quality_check.png" width="100%" alt="" title="data_quality_check"/>
 
@@ -187,6 +188,7 @@ Sample Query Results:
 
 
 ###Clean Up Resources
+##### &nbsp;
 Congratulations, you just deployed an ETL data pipeline with Apache Airflow and Amazon EMR. Remember to delete your S3 bucket and EMR cluster in order to avoid unexpected costs.
 
 

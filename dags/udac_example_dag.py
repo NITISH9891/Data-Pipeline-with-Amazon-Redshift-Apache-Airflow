@@ -13,9 +13,9 @@ from helpers import SqlQueries
 
 default_args = {
     'owner': 'udacity',
-    'start_date': datetime.now(), #(2019, 1, 12)
-    #'retries': 3,
-    #'retry_delay': timedelta(minutes=5),
+    'start_date': datetime.now(), 
+    'retries': 3,
+    'retry_delay': timedelta(minutes=5),
     'email_on_retry': False,
     'depends_on_past': False,
 }
@@ -24,8 +24,8 @@ default_args = {
 dag = DAG('udac_example_dag',
           default_args=default_args,
           description='Load and transform data in Redshift with Airflow',
-          schedule_interval= None, #'0 * * * *'
-          catchup=False,
+          schedule_interval= '0 * * * *',
+          catchup=True,
           max_active_runs = 1
         )
 
@@ -108,16 +108,13 @@ end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
 # DAG DIAGRAM
 
-start_operator >> stage_songs_to_redshift
-start_operator >> stage_events_to_redshift
+start_operator >> [stage_songs_to_redshift, stage_events_to_redshift]
 
 stage_songs_to_redshift >> load_songplays_table
 stage_events_to_redshift >> load_songplays_table
 
-load_songplays_table >> load_user_dimension_table
-load_songplays_table >> load_song_dimension_table
-load_songplays_table >> load_artist_dimension_table
-load_songplays_table >> load_time_dimension_table
+load_songplays_table >> [load_user_dimension_table,load_song_dimension_table,load_artist_dimension_table,load_time_dimension_table]
+
 
 load_user_dimension_table >> run_quality_checks
 load_song_dimension_table >> run_quality_checks
